@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos e Serviços | Sua Saúde, Nossos Planos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para os cards de produtos */
+        .grid-produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 40px 5%;
+        }
+        .card-produto {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 5px solid #004a8d;
+        }
+        .card-produto:hover {
+            transform: translateY(-10px);
+        }
+        .icon-servico {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Logo" class="logo-img">
+                <span class="logo-texto">Sua Saúde, Nossos Planos</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="produtos.html" class="active">Produtos e Serviços</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="background-color: #eef4f9;">
+        <h2>Nossas Soluções em Saúde</h2>
+        <p>Trabalhamos com as melhores operadoras do Brasil para garantir o seu bem-estar.</p>
+    </section>
+
+    <main class="grid-produtos">
+        <div class="card-produto">
+            <span class="icon-servico">👤</span>
+            <h3>Plano Individual</h3>
+            <p>Ideal para profissionais liberais e autônomos que buscam proteção personalizada.</p>
+        </div>
+
+        <div class="card-produto">
+            <span class="icon-servico">👨‍👩‍👧‍👦</span>
+            <h3>Plano Familiar</h3>
+            <p>Cuidado completo para quem você ama, com descontos especiais por dependente.</p>
+        </div>
+
+        <div class="card-produto">
+            <span class="icon-servico">🏢</span>
+            <h3>Plano Empresarial</h3>
+            <p>Redução de custos e consultoria para empresas a partir de 2 vidas (MEI e PME).</p>
+        </div>
+
+        <div class="card-produto">
+            <span class="icon-servico">📋</span>
+            <h3>Consultoria</h3>
+            <p>Análise de carências, rede de hospitais e melhor custo-benefício do mercado.</p>
+        </div>
+    </main>
+
+    <section class="container" style="text-align: center; flex-direction: column;">
+        <h3>Operadoras Parceiras</h3>
+        <p>Amil • Bradesco Saúde • SulAmérica • Unimed • Golden Cross • Porto Saúde</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sua Saúde, Nossos Planos - RJ</p>
+    </footer>
+
+</body>
+</html>
