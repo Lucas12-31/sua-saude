@@ -1,27 +1,35 @@
-/* Reset básico */
+/* Reset básico - Remove margens padrão e define a fonte */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
     line-height: 1.6;
     color: #333;
+    background-color: #fff;
 }
 
-/* Menu de Navegação */
+/* --- Cabeçalho e Menu --- */
 header {
     background-color: #004a8d; /* Azul confiança */
     color: white;
-    padding: 1rem 5%;
+    padding: 0.5rem 5%; /* Padding reduzido para a logo não ficar gigante */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: sticky; /* Faz o menu acompanhar o scroll */
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo-img {
+    height: 60px; 
+    width: auto;
+    display: block;
 }
 
 header nav ul {
@@ -30,62 +38,90 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s; /* Suaviza a troca de cor */
 }
 
+/* Efeito ao passar o mouse e link ativo */
+header nav ul li a:hover, 
 header nav ul li a.active {
-    border-bottom: 2px solid #fff;
+    color: #a0d2eb; /* Um azul mais claro para destaque */
 }
 
-/* Banner Hero */
+/* --- Banner Hero --- */
 .hero {
-    background: #f4f4f4;
-    padding: 60px 5%;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 5%;
     text-align: center;
 }
 
 .hero h2 {
     font-size: 2.5rem;
     color: #004a8d;
+    margin-bottom: 10px;
 }
 
 .btn {
     display: inline-block;
     background: #28a745; /* Verde saúde */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.2s;
 }
 
-/* Layout com Imagem Alinhada */
+.btn:hover {
+    transform: scale(1.05); /* Botão cresce levemente ao passar o mouse */
+    background: #218838;
+}
+
+/* --- Seções de Conteúdo --- */
 .container {
     display: flex;
     align-items: center;
-    padding: 50px 5%;
-    gap: 40px;
+    padding: 60px 5%;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo no meio da tela */
 }
 
 .texto-destaque {
     flex: 1;
 }
 
-.imagem-destaque img {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.texto-destaque h3 {
+    color: #004a8d;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
 }
 
+.imagem-destaque {
+    flex: 1;
+}
+
+.imagem-destaque img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* --- Rodapé --- */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #333;
-    color: white;
+    padding: 30px;
+    background: #222;
+    color: #ccc;
+    font-size: 0.9rem;
 }
