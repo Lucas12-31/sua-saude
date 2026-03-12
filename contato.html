@@ -109,11 +109,26 @@
                 <div class="form-group">
                     <label>Plano de Interesse</label>
                     <select name="plano">
-                        <option value="individual">Plano Individual</option>
-                        <option value="familiar">Plano Familiar</option>
+                        <option value="individual">Plano Por Adesão</option>
+                        <option value="familiar">Plano Individual/Familiar</option>
                         <option value="empresarial">Plano Empresarial (PME/MEI)</option>
                         <option value="senior">Plano Sênior</option>
                     </select>
+                </div>
+                <div class="form-group" style="display: flex; gap: 15px;">
+                    <div style="flex: 1;">
+                        <label>Idade / Qtd. de Vidas</label>
+                        <input type="text" name="perfil" placeholder="Ex: 32 anos / 3 pessoas">
+                    </div>
+                    <div style="flex: 1;">
+                        <label>Empresa (Opcional)</label>
+                        <input type="text" name="empresa" placeholder="Nome da empresa">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Informações Complementares</label>
+                    <textarea name="mensagem" rows="4" placeholder="Conte-nos mais sobre o que você busca..."></textarea>
                 </div>
                 <button type="submit" class="btn-enviar">Enviar Solicitação</button>
             </form>
