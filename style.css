@@ -16,7 +16,7 @@ body {
 header {
     background-color: #004a8d; /* Azul confiança */
     color: white;
-    padding: 0.5rem 5%; /* Padding reduzido para a logo não ficar gigante */
+    padding: 1rem 5%; /* Padding reduzido para a logo não ficar gigante */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,7 @@ header {
 }
 
 .logo-img {
-    height: 60px; 
+    height: 100px; 
     width: auto;
     display: block;
 }
@@ -103,8 +103,8 @@ header nav ul li a.active {
 
 .texto-destaque h3 {
     color: #004a8d;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
 }
 
 .imagem-destaque {
