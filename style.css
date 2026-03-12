@@ -26,10 +26,36 @@ header {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* --- Novo Alinhamento da Logo com Texto --- */
+
+/* Estiliza a div que contém tudo */
+.logo {
+    display: flex; /* Cria um contexto flex para alinhar o link e o menu depois */
+    align-items: center;
+}
+
+/* Estiliza o link pai, que contém a imagem e o texto */
+.logo-link {
+    display: flex; /* Alinha a imagem e o span de texto lado a lado */
+    align-items: center; /* Centraliza verticalmente a imagem e o texto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    gap: 15px; /* Adiciona um espaço de 15px entre a imagem e o texto */
+}
+
+/* Estiliza a imagem da logo */
 .logo-img {
-    height: 100px; 
-    width: auto;
+    height: 80px; /* Aumentamos para 80px para dar mais destaque */
+    width: auto; /* Mantém a proporção */
     display: block;
+}
+
+/* Estiliza o texto por extenso */
+.logo-texto {
+    color: white; /* Cor branca para contrastar com o fundo azul */
+    font-size: 1.8rem; /* Tamanho da fonte grande e legível */
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fonte profissional */
+    white-space: nowrap; /* Impede que o texto quebre em duas linhas em telas menores */
 }
 
 header nav ul {
