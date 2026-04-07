@@ -1,16 +1,14 @@
-// Aguarda o carregamento do DOM para garantir que o formulário exista
 document.addEventListener('DOMContentLoaded', () => {
     const formContato = document.querySelector('#form-contato');
 
     if (formContato) {
         formContato.addEventListener('submit', function(event) {
-            // Captura os valores dos campos
+            
             const nome = document.querySelector('input[name="nome"]').value.trim();
             const email = document.querySelector('input[name="email"]').value.trim();
             const telefone = document.querySelector('input[name="telefone"]').value.trim();
             const quantidade = document.querySelector('input[name="quantidade"]').value;
 
-            // Validação Básica
             if (nome.length < 3) {
                 alert("Por favor, preencha seu nome completo.");
                 event.preventDefault();
@@ -35,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Se passar por tudo, o formulário envia normalmente (ou via Formspree)
             alert("Sua solicitação foi validada com sucesso! Um consultor entrará em contato em breve.");
         });
     }
