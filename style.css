@@ -12,13 +12,13 @@ body {
 }
 
 header {
-    background-color: #004a8d; /* Azul confiança */
+    background-color: #004a8d; 
     color: white;
-    padding: 1rem 5%; /* Padding reduzido para a logo não ficar gigante */
+    padding: 1rem 5%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky; /* Faz o menu acompanhar o scroll */
+    position: sticky; 
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
