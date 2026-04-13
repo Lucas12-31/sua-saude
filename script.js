@@ -3,37 +3,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (formContato) {
         formContato.addEventListener('submit', function(event) {
-            
-            const nome = document.querySelector('input[name="nome"]').value.trim();
-            const email = document.querySelector('input[name="email"]').value.trim();
-            const telefone = document.querySelector('input[name="telefone"]').value.trim();
-            const quantidade = document.querySelector('input[name="quantidade"]').value;
 
-            if (nome.length < 3) {
-                alert("Por favor, preencha seu nome completo.");
-                event.preventDefault();
-                return;
+            event.preventDefault();
+
+            const nome = document.querySelector('input[name="nome"]');
+            const email = document.querySelector('input[name="email"]');
+            const telefone = document.querySelector('input[name="telefone"]');
+            const quantidade = document.querySelector('input[name="quantidade"]');
+
+            let erros = [];
+
+            if (nome.value.trim().length < 3) {
+                erros.push("Digite seu nome completo.");
+                nome.style.borderColor = "red"; 
+            } else {
+                nome.style.borderColor = "#ccc";
             }
 
-            if (!email.includes("@") || !email.includes(".")) {
-                alert("Por favor, insira um e-mail válido.");
-                event.preventDefault();
-                return;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                erros.push("Insira um e-mail válido.");
+                email.style.borderColor = "red";
+            } else {
+                email.style.borderColor = "#ccc";
             }
 
-            if (telefone.length < 10) {
-                alert("O telefone deve conter o DDD e pelo menos 8 dígitos.");
-                event.preventDefault();
-                return;
+            if (telefone.value.trim().length < 10) {
+                erros.push("Telefone inválido (mínimo 10 dígitos).");
+                telefone.style.borderColor = "red";
+            } else {
+                telefone.style.borderColor = "#ccc";
             }
 
-            if (quantidade < 1) {
-                alert("A quantidade de pessoas deve ser no mínimo 1.");
-                event.preventDefault();
-                return;
+            if (erros.length > 0) {
+                alert("Erros encontrados:\n\n" + erros.join("\n"));
+            } else {
+                alert("Validação JS concluída com sucesso! Enviando dados...");
+                formContato.submit(); 
             }
-
-            alert("Sua solicitação foi validada com sucesso! Um consultor entrará em contato em breve.");
         });
     }
 });
